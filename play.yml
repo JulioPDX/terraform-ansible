@@ -10,11 +10,11 @@
       name: nginx
       state: present
 
-  - name: hello there
-    ansible.builtin.shell:
-      cmd: ls -a
-    register: stuff
+  # - name: hello there
+  #   ansible.builtin.shell:
+  #     cmd: ls -a
+  #   register: stuff
 
-  - name: some output
-    debug:
-      var: stuff.stdout
+  # - name: some output
+  #   debug:
+  #     var: stuff.stdout
