@@ -1,0 +1,20 @@
+---
+- name: Checking cloud connectivity
+  gather_facts: false
+  hosts: linux
+  become: true
+  tasks:
+
+  - name: Install NGINX
+    ansible.builtin.package:
+      name: nginx
+      state: present
+
+  - name: hello there
+    ansible.builtin.shell:
+      cmd: ls -a
+    register: stuff
+
+  - name: some output
+    debug:
+      var: stuff.stdout
