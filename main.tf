@@ -149,8 +149,8 @@ resource "ansible_host" "vm1" {
   name   = azurerm_linux_virtual_machine.my_terraform_vm1.name
   groups = ["linux"]
   variables = {
-    ansible_user     = azurerm_linux_virtual_machine.my_terraform_vm1.admin_user
-    ansible_password = azurerm_linux_virtual_machine.my_terraform_vm1.admin_password
+    ansible_user     = "azureuser"
+    ansible_password = "Super123!"
     ansible_host     = azurerm_linux_virtual_machine.my_terraform_vm1.public_ip_address
   }
 }
@@ -159,8 +159,8 @@ resource "ansible_host" "vm2" {
   name   = azurerm_linux_virtual_machine.my_terraform_vm2.name
   groups = ["linux"]
   variables = {
-    ansible_user     = azurerm_linux_virtual_machine.my_terraform_vm2.admin_user
-    ansible_password = azurerm_linux_virtual_machine.my_terraform_vm2.admin_password
+    ansible_user     = "azureuser"
+    ansible_password = "Super123!"
     ansible_host     = azurerm_linux_virtual_machine.my_terraform_vm2.public_ip_address
   }
 }
